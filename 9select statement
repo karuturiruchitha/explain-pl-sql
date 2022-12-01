@@ -1,0 +1,19 @@
+to use select statement we need a table without any data we can't use select statement.
+
+------------------------1st creating table
+
+        
+    CREATE TABLE DEPT
+       (DEPTNO NUMBER(2),
+        DNAME VARCHAR2(14),
+        LOC VARCHAR2(13) );
+ 
+INSERT INTO DEPT VALUES (10, 'ACCOUNTING', 'NEW YORK');
+INSERT INTO DEPT VALUES (20, 'RESEARCH', 'DALLAS');
+INSERT INTO DEPT VALUES (30, 'SALES', 'CHICAGO');
+INSERT INTO DEPT VALUES (40, 'OPERATIONS', 'BOSTON');
+
+
+----------------------------using select satement
+
+select * from DEPT;
