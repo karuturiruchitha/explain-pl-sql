@@ -1,0 +1,6 @@
+SELECT
+CASE
+  WHEN a < b THEN 'hi'
+  WHEN d < e THEN 'bye'
+END
+FROM wishers;
