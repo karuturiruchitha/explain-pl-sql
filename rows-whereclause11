@@ -1,0 +1,11 @@
+SELECT
+	employee_id,
+	emp_name,
+	emp_surname,
+	salary
+FROM
+	employees
+WHERE
+	salary > 15000
+ORDER BY
+	salary DESC;
