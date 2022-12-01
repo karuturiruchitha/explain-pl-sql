@@ -1,0 +1,4 @@
+SELECT *
+FROM emp
+WHERE regexp_like (name , 'john') ;
+ 
