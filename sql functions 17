@@ -1,0 +1,4 @@
+SELECT AVG(marks) AS Avgmarks FROM Students; 
+
+SELECT AVG(age) AS Avgage FROM Students; 
+
