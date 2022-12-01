@@ -1,0 +1,11 @@
+SELECT empName, ContactName, Address
+FROM emp
+WHERE Address IS NULL;
+
+
+
+----------------------if not null
+
+SELECT empName, ContactName, Address
+FROM emp
+WHERE Address IS NOT NULL;
