@@ -1,0 +1,19 @@
+-----Implicit Data Type Conversion
+A VARCHAR2 or CHAR value can be implicitly converted to NUMBER or DATE type value by Oracle. 
+Similarly, a NUMBER or DATA type value can be automatically converted to character data by Oracle server. 
+
+SELECT employee_id,first_name,salary
+FROM employees
+WHERE salary > 19000;
+
+
+-----Explicit Data Type Conversion
+SQL Conversion functions are single row functions which are capable of typecasting column value, literal or an expression . 
+TO_CHAR, TO_NUMBER and TO_DATE are the three functions which perform cross modification of data types.
+
+
+SELECT first_name,
+       TO_CHAR (hire_date, 'MONTH DD, YYYY') HIRE_DATE,
+	   TO_CHAR (salary, '$99999.99') Salary
+FROM employees
+WHERE rownum < 8;
