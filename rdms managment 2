@@ -1,0 +1,9 @@
+A relational database management system (RDBMS or just RDB) is a common type of database that stores data in tables, 
+so it can be used in relation to other stored datasets.
+Most databases used by businesses these days are relational databases, as opposed to a flat file or hierarchical database.
+RDBMS stands for Relational Database Management System. It is an information management system that is oriented on a data model. 
+Here all the information is properly stored as tables. 
+RDBMS Example systems are SQL Server, Oracle, MySQL, MariaDB, and SQLite.
+Features of a relational database. Relational databases need ACID characteristics.
+ACID refers to four essential properties: Atomicity, Consistency, Isolation, and Durability. 
+These features are the key difference between a relational database and a non-relational database.
