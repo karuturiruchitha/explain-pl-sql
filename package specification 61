@@ -1,0 +1,22 @@
+CREATE [OR REPLACE] PACKAGE BODY <package_name>
+IS
+<global_declaration part>
+<Private element definition>
+<sub_program and public element definition>
+.
+<Package Initialization> 
+END <package_name>
+
+------The above syntax shows the creation of package body.
+
+
+
+CREATE [OR REPLACE] PACKAGE BODY <package_name>
+IS
+<Private element definition>
+<sub_program and public element definition>
+.
+BEGINE
+<Package Initialization> 
+END <package_name>
+-----------The above syntax shows the definition of package initialization in the package body.
