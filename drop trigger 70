@@ -1,0 +1,5 @@
+The trigger must be in your own schema or you must have the DROP ANY TRIGGER system privilege.
+To drop a trigger on DATABASE in another user's schema, you must also have the ADMINISTER DATABASE TRIGGER system privilege.
+
+----example:
+DROP TRIGGER table_name; 
