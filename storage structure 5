@@ -1,0 +1,12 @@
+Logical storage structures are managed and handled only by Oracle Database. 
+An operating system cannot see them. 
+All logical structures are stored in a database logical space like data blocks, extents, segments and tablespaces.
+Physical structures are those that can be seen and operated on from the operating system, such as the physical files that store data on disk. 
+Logical structures are created and recognized by the Oracle database server and are not known to the operating system.
+The structure of a logical database is usually based on the foreign key relationships between hierarchical tables in the SAPSystem. 
+Logical databases have a tree-like structure.
+There is a single node at the highest level. 
+This is known as the root node.
+Two kinds of storage structures are familiar from everyday life:
+---stack 
+---queue.
