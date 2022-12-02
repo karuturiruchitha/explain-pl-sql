@@ -1,0 +1,10 @@
+DECLARE
+   bonus  REAL;
+   CURSOR c1 IS SELECT empno, sal, comm FROM emp;
+BEGIN
+   FOR c1rec IN c1 LOOP
+      bonus := (c1rec.sal * 0.05) + (c1rec.comm * 0.25);
+      INSERT INTO bonuses VALUES (c1rec.empno, bonus);
+   END LOOP;
+   COMMIT;
+END;
