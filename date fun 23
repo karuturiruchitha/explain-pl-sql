@@ -1,10 +1,15 @@
+------date function
+
+
+The DATE function returns the sequential serial number that represents a particular date. 
+Syntax: DATE(year,month,day) The DATE function syntax has the following arguments: Year Required. 
+The value of the year argument can include one to four digits.
+
+
 SELECT * FROM Orders WHERE OrderDate='2007-12-12';
 
 
 SELECT DATEDIFF('2018-01-16','2010-01-03') AS DateDiff;
-
-
-------date format
 
 DATE_FORMAT(NOW(),'%d %b %y');
 
