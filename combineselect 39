@@ -1,0 +1,6 @@
+SELECT name
+  FROM empa
+EXCEPT
+SELECT name
+  FROM empB
+  ORDER BY name;
