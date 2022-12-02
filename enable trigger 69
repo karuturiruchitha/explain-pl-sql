@@ -11,5 +11,5 @@ ALTER TABLE inventory
 
 
 ALTER TRIGGER orders_before_insert ENABLE;
-
+ALTER TABLE orders ENABLE ALL TRIGGERS;
 
