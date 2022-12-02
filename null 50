@@ -1,0 +1,16 @@
+ we can use a NULL statement in the ELSE clause of a simple CASE statement as shown in the following example:
+
+DECLARE
+  n_credit_status VARCHAR2( 100 );
+BEGIN
+  n_credit_status := 'NICE';
+
+  CASE n_credit_status
+  WHEN 'BLOCK' THEN
+    request_for_aproval;
+  WHEN 'WARNING' THEN
+    send_email_to_accountant;
+  ELSE
+    NULL;
+  END CASE;
+END;
