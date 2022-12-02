@@ -1,0 +1,18 @@
+Pseudocolumn: A pseudo-column behaves like a table column but is not actually stored in the table. 
+You can select from pseudo-columns, but you cannot insert, update, or delete their values. 
+A pseudo-column is also similar to a function without arguments. This section describes these pseudo-columns: 
+-CURRVAL and NEXTVAL
+-LEVEL
+-ROWID
+-ROWNUM
+
+
+USE DataFlair;
+SELECT * FROM Location;
+
+INSERT INTO tableName VALUES (sequence.Nextval(),value1,value2,....);
+
+
+USE DataFlair;
+INSERT INTO location VALUES (location_id.Nextval(),'Noida',5);
+SELECT * from the location;
