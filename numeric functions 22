@@ -1,0 +1,24 @@
+-------Numeric Functions are used to perform operations on numbers and return numbers.
+----Following are the numeric functions defined in SQL:
+
+--ABS(): It returns the absolute value of a number.
+
+   SELECT ABS(-298.5);
+
+
+--CEILING(): It returns the smallest integer value that is greater than or equal to a number.
+
+  SELECT CEILING(29.75);
+
+--FLOOR(): It returns the largest integer value that is less than or equal to a number.
+
+  SELECT FLOOR(20.78);
+
+
+--LOG10(): It returns the base-10 logarithm of a number.
+
+   SELECT LOG(2);
+   
+-----MOD(): It returns the remainder of n divided by m.
+
+    SELECT MOD(19, 7);
