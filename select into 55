@@ -1,0 +1,13 @@
+PL/SQL SELECT INTO statement is the simplest and fastest way to fetch a single row from a table into variables. 
+
+
+DECLARE
+  l_customer_name customers.name%TYPE;
+BEGIN
+  -- get name of the customer 100 and assign it to l_customer_name
+  SELECT name INTO l_customer_name
+  FROM customers
+  WHERE customer_id = 100;
+  -- show the customer name
+  dbms_output.put_line( v_customer_name );
+END;
