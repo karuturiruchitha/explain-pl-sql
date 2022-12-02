@@ -1,0 +1,33 @@
+CREATE OR REPLACE FUNCTION even_or_odd (
+    n IN NUMBER
+) RETURN NUMBER IS
+    r NUMBER;
+BEGIN
+    IF ( MOD(n, 2) = 0 ) THEN
+        r := 1;
+    ELSE
+        r := 0;
+    END IF;
+
+    RETURN r;
+END;
+
+SELECT
+    even_or_odd(31)
+  FROM
+    dual;
+
+   SET SERVEROUTPUT ON
+
+DECLARE
+    s NUMBER := &number;
+    i NUMBER;
+BEGIN
+    r := even_or_odd(a);
+    IF ( r = 1 ) THEN
+        dbms_output.put_line('IT IS A EVEN NUMBER');
+    ELSE
+        dbms_output.put_line('IT IS A ODD NUMBER');
+    END IF;
+
+END;
