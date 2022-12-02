@@ -1,0 +1,44 @@
+---Create a database connection
+
+---Before you create a database connection, the following prerequisites must be met:
+
+The appropriate connector must be added before you can create a database connection. 
+For more information, see Required vendor files and Manage connector types.
+You must have the appropriate privileges to the database you want to connect to. 
+If you do not have database privileges, contact the database administrator.
+You must be able to authenticate the connection. For most databases, a username and password are used for authentication. 
+SQL Server and BigQuery use the following alternate authentication methods:
+SQL Server can use either SQL Server authentication (username and password) or OS authentication. 
+For more information, see Enable OS authentication.
+BigQuery uses service account authentication. 
+For more information, see Create a service account and private key.
+
+
+-----Create database connections
+
+
+--Complete the following steps to create a database connection from the home page:
+
+Click the Connections tab Connections.
+Click New connection and choose Database from the menu.
+The New connection window appears.
+
+Choose the database type you want to connect to. 
+Only database types available to your organization are listed. 
+For more information, see Manage connector types.
+Provide the connection properties for your database. Required fields are marked with an asterisk (*).
+Click Add.
+Insights uses the connection properties to try to connect to the database. 
+Once successful, the connection appears on the Connections page.
+
+If Insights can't connect to the database, an error message appears. 
+See Troubleshoot a database connection for more information about the reasons a connection cannot be established.
+
+A relational database connection is created. 
+The connection can be updated from the Connections tab on the home page.
+For more information, see Update a database connection.
+
+
+
+
+
