@@ -1,0 +1,14 @@
+Founding of Oracle. In 1977, Larry Ellison, Bob Miner, 
+and Ed Oates started the consultancy Software Development Laboratories, which became Relational Software, Inc. (RSI). 
+In 1983, RSI became Oracle Systems Corporation and then later Oracle Corporation. 
+First commercially available RDBMS.
+Oracle RAC provides software for clustering and high availability in Oracle database environments.
+It provides clustering by allowing multiple computers to run Oracle RDBMS simultaneously while accessing a single database.
+An Oracle instance consists of three main parts: System Global Area (SGA), Program Global Area (PGA), and background processes. 
+The SGA is a shared memory structure allocated when the instance started up and released when it is shut down.
+There are three major structures in Oracle Database server architecture: 
+--memory structures,
+--process structures, and 
+--storage structures. 
+A basic Oracle database system consists of an Oracle database and a database instance. 
+The database consists of both physical structures and logical structures.
