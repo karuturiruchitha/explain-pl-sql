@@ -1,0 +1,9 @@
+Disabling Triggers
+Consider temporarily disabling a trigger if one of the following conditions is true:
+An object that the trigger references is not available.
+You must perform a large data load and want it to proceed quickly without firing triggers.
+You are loading data into the table to which the trigger applies.
+
+example:
+
+ALTER TABLE orders DISABLE ALL TRIGGERS;
