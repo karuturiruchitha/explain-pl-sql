@@ -1,0 +1,25 @@
+------variables means
+n PL/SQL, a variable is named storage location that stores a value of a particular data type. 
+The value of the variable changes through the program.
+Before using a variable, you must declare it in the declaration section of a block.
+
+
+-----The syntax for a variable declaration is as follows:
+
+variable_name datatype [NOT NULL] [:= initial_value];
+
+
+
+DECLARE
+    customer_group VARCHAR2(100) := 'mango';
+BEGIN
+    customer_group := 'Grapes';
+    DBMS_OUTPUT.PUT_LINE(customer_group);
+END;
+
+
+DECLARE 
+   product_name VARCHAR2(100) DEFAULT 'tv';
+BEGIN 
+   NULL; 
+END;
