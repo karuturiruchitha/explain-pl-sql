@@ -1,0 +1,10 @@
+DECLARE 
+  n_sales NUMBER;
+  n_tax NUMBER;
+BEGIN 
+    GOTO inside_if_statement;
+    IF n_sales > 0 THEN
+     <<inside_if_statement>>
+      n_tax  := n_sales * 0.1;
+    END IF;
+END;
