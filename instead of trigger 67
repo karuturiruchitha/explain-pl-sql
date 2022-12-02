@@ -1,0 +1,20 @@
+--------instead of trigger means
+
+An INSTEAD OF trigger is an SQL trigger that is processed “instead of” an SQL UPDATE, DELETE or INSERT statement.
+Unlike SQL BEFORE and AFTER triggers, an INSTEAD OF trigger can be defined only on a view, not a table.
+
+CREATE OR REPLACE TRIGGER new_customer_trg
+    INSTEAD OF INSERT ON vw_customers
+    FOR EACH ROW
+DECLARE
+    l_customer_id NUMBER;
+BEGIN
+    -- insert a new customer first
+    INSERT INTO customers(name, address, website, credit_limit)
+    VALUES(:NEW.NAME, :NEW.address, :NEW.website, :NEW.credit_limit)
+    RETURNING customer_id INTO l_customer_id;
+    
+    -- insert the contact
+    INSERT INTO contacts(first_name, last_name, email, phone, customer_id)
+    VALUES(:NEW.first_name, :NEW.last_name, :NEW.email, :NEW.phone, l_customer_id);
+END;
