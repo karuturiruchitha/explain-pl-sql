@@ -1,0 +1,9 @@
+The term "relational database" was first defined by E. F. Codd at IBM in 1970.
+Codd introduced the term in his research paper "A Relational Model of Data for Large Shared Data Banks".
+In this paper and later papers, he defined what he meant by "relational".
+One well-known definition of what constitutes a relational database system is composed of Codd's 12 rules.
+The most common definition of an RDBMS is a product that presents a view of data as a collection of rows and columns, even if it is not based strictly upon relational theory.
+By this definition, RDBMS products typically implement some but not all of Codd's 12 rules.
+A second school of thought argues that if a database does not implement all of Codd's rules (or the current understanding on the relational model, as expressed by Christopher J. Date, Hugh Darwen and others), it is not relational. 
+This view, shared by many theorists and other strict adherents to Codd's principles, would disqualify most DBMSs as not relational.
+For clarification, they often refer to some RDBMSs as truly-relational database management systems (TRDBMS), naming others pseudo-relational database management systems (PRDBMS).
