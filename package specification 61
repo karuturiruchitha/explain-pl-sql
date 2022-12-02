@@ -1,22 +1,17 @@
-CREATE [OR REPLACE] PACKAGE BODY <package_name>
+--------Package Specification
+Package specification consists of a declaration of all the public variables, cursors, objects, procedures, functions, and exception.
+
+Below are few characteristics of the Package specification.
+
+The elements which are all declared in the specification can be accessed from outside of the package. Such elements are known as a public element.
+The package specification is a standalone element that means it can exist alone without package body.
+Whenever a package has referred an instance of the package is created for that particular session.
+After the instance is created for a session, all the package elements that are initiated in that instance are valid until the end of the session.
+Syntax
+
+CREATE [OR REPLACE] PACKAGE <package_name> 
 IS
-<global_declaration part>
-<Private element definition>
-<sub_program and public element definition>
+<sub_program and public element declaration>
 .
-<Package Initialization> 
-END <package_name>
-
-------The above syntax shows the creation of package body.
-
-
-
-CREATE [OR REPLACE] PACKAGE BODY <package_name>
-IS
-<Private element definition>
-<sub_program and public element definition>
 .
-BEGINE
-<Package Initialization> 
-END <package_name>
------------The above syntax shows the definition of package initialization in the package body.
+END <package name>
