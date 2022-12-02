@@ -1,0 +1,40 @@
+------What are literal values means
+Literal values (constants) are exact values (alphabetic or numeric). 
+These values are also the constants that you use in expressions, 
+such as the numeric value 100, or the string "John Smith".
+
+String Literals
+String literals are always surrounded by single quotes (').
+For example:
+
+'TechOnTheNet.com'
+'This is a literal'
+'XYZ'
+'123'
+
+
+--------Integer Literals
+Integer literals can be either positive numbers or negative numbers, but do not contain decimals. 
+If you do not specify a sign, then a positive number is assumed. Here are some examples of valid integer literals:
+
+500
++500
+-500
+
+
+--------Decimal Literals
+Decimal literals can be either positive numbers or negative numbers and contain decimals. 
+If you do not specify a sign, then a positive number is assumed. Here are some examples of valid decimal literals:
+
+24.9
++24.9
+-24.9
+
+
+--------Datetime Literals
+Datetime literals are character representations of datetime values that are enclosed in single quotes.
+Here are some examples of valid datetime literals:
+
+'April 30, 2015'
+'2015/09/30'
+'2015/09/30 08:34:25'
