@@ -1,0 +1,5 @@
+SELECT A.empName AS empName1, B.employName AS employName2, A.City
+FROM emp A, emp B
+WHERE A.empID <> B.empID
+AND A.depart = B.depart
+ORDER BY A.depart;
