@@ -1,0 +1,46 @@
+
+----Different data types supported in SQL are,
+
+-------------------------Integer Data Types
+
+
+Data Type	Description
+BIT(x)	can store x-bit values. x can range from 1 to 64
+TINYINT	can store numbers from -128 to 127
+SMALLINT	can store numbers from -32768 to 32767
+MEDIUMINT	can store numbers from -8,388,608 to 8,388,607
+INT	can store numbers from -2,147,483,648 to 2,147,483,647
+BIGINT	can store numbers from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
+DECIMAL(x, y)	can store decimal number of total x digits (max up to 65) and y digits (max up to 30) among them is followed by decimal point
+
+
+--------------------------String Data Types
+
+
+Data Type	Description
+CHAR(x)	can store characters of fixed length (max 8000 chars)
+VARCHAR(x)	can store characters up to given length (max 8000 chars)
+BINARY(x)	can store binary strings of fixed length
+VARBINARY(x)	can store binary strings up to given length
+TINYTEXT	can store characters up to 255 characters
+TEXT(x)	can store characters up to given characters (max upto 65,535 bytes)
+MEDIUMTEXT	can store characters up to 16,777,215 characters
+LONGTEXT	can store characters up to 4,294,967,295 characters
+BLOB(x)	can store binary large object up to 65,535 bytes
+MEDIUMBLOB	can store binary large object up to 16,777,215 bytes
+LONGBLOB	can store binary large object up to 4,294,967,295 bytes
+
+
+---------------------------Date and Time Data Types
+
+
+Data Type	Description
+DATE	can store date in format of YYYY-MM-DD and ranged from 1000-01-01 to 9999-12-31
+DATETIME	can store date and time in format of YYYY-MM-DD hh:mm:ss 
+TIME
+can store only time in format of hh:mm:ss and ranged from -838:59:59 to 838:59:59
+YEAR	can store year in 4 digits format and ranged from 1901 to 2155
+TIMESTAMP	can store timestamp from the current time zone to UTC 
+
+
+
