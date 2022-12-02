@@ -1,0 +1,21 @@
+----What is INTERVAL in SQL is
+Measures the difference between two points in time. 
+Intervals can be positive or negative. 
+The INTERVAL data type is SQL:2008 compliant,
+and supports interval qualifiers that are divided into two major subtypes:
+Year-month: Span of years and months.
+
+----We can use the following syntax to create an interval value:
+
+INTERVAL expr unit  
+
+INTERVAL 2 DAY  
+
+
+mysql> SELECT '2020-02-01' + INTERVAL 5 DAY AS DATE;  
+
+
+mysql> SELECT DATE_ADD('2020-02-01', INTERVAL 3 MONTH) AS MONTH_LATER,   
+DATE_SUB('2020-02-01',INTERVAL 3 MONTH) AS MONTH_BEFORE;  
+
+
