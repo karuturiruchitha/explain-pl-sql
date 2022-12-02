@@ -1,0 +1,32 @@
+---------------To drop a package, you use the DROP PACKAGE statement with the following syntax:
+
+DROP PACKAGE [BODY] schema_name.package_name;
+Code language: SQL (Structured Query Language) (sql)
+Let’s examine the syntax of the statement in detail.
+
+BODY
+If you want to drop only the body of the package, you need to specify the BODY keyword. 
+If you omit the BODY keyword, then the statement drops both the body and specification of the package.
+Oracle does not invalidate dependent objects when you drop only the body of a package but not the package specification.
+However, you will not be able to call one of the procedures or function declared in the package specification till you recreate the package body.
+---schema_name
+The schema allows you to specify the name of the schema that contains the package. 
+If you omit schema, then Oracle assumes the package is in your own schema.
+
+--package_name
+The package_name is the name of the package to be dropped.
+PL/SQL DROP PACKAGE example
+The following statement drops the package body of the package order_mgmt that we created in the previous tutorial.
+
+
+
+DROP PACKAGE BODY order_mgmt;
+Code language: SQL (Structured Query Language) (sql)
+To drop both body and specification of the order_mgmt package, you use the following statement:
+
+
+
+DROP PACKAGE order_mgmt;
+Code language: SQL (Structured Query Language) (sql)
+Now you should know how to use the PL/SQL DROP PACKAGE statement to drop a package.
+
