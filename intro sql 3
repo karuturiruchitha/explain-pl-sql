@@ -1,0 +1,12 @@
+SQL stands for Structured Query Language. SQL lets you access and manipulate databases. 
+SQL became a standard of the American National Standards Institute (ANSI) in 1986, 
+and of the International Organization for Standardization (ISO) in 1987.
+The basic use of SQL for data professionals and SQL users is to insert, update, and delete the data from the relational database. 
+SQL allows the data professionals and users to retrieve the data from the relational database management systems.
+It also helps them to describe the structured data.
+ Five types of SQL queries are 
+ 1) Data Definition Language (DDL) 
+ 2) Data Manipulation Language (DML) 
+ 3) Data Control Language(DCL) 
+ 4) Transaction Control Language(TCL) and, 
+ 5) Data Query Language (DQL).
