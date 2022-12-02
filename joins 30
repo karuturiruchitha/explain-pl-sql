@@ -1,0 +1,4 @@
+SELECT emp.emp_name, emp.address, emp.course_name  
+FROM emp   
+INNER JOIN department  
+ON emp.emp_id = department.department_id; 
