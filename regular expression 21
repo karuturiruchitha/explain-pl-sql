@@ -1,0 +1,22 @@
+----regexp_count
+
+SELECT REGEXP_COUNT('a nun, a plain, a cancle: Puma', 'an');
+ REGEXP_COUNT
+ 
+
+
+----regexp_ilike
+
+SELECT * FROM longvc where regexp_ilike(body, 'ç');
+                      
+
+
+-----REGEXP_REPLAC
+
+SELECT REGEXP_REPLACE('healthy, wealthy, and wise','\w+thy');
+ REGEXP_REPLACE
+ 
+-----REGEXP_LIKE
+
+SELECT v FROM t WHERE REGEXP_LIKE(v,'a');
+ 
