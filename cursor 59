@@ -1,0 +1,36 @@
+-----cursor means
+
+A cursor variable is a variable that references to a cursor.
+Different from implicit and explicit cursors, a cursor variable is not tied to any specific query. 
+Meaning that a cursor variable can be opened for any query.
+
+
+---------to declare a cursor
+
+DECLARE
+    TYPE customer_t IS REF CURSOR RETURN customers%ROWTYPE;
+    c_customer customer_t;
+    
+    
+    
+----------program
+
+
+set serveroutput on
+declare
+v_empno emp.empno%type;
+v_ename emp.ename%type;
+v_job emp.job%type:='SALESMAN';
+v_emp_refcur sys_refcursor;
+begin
+dbms_output.put_line('employees with job'|| v_job);
+dbms_output.put_line('empno,ename');
+dbms_output.put_line('------');
+emp_by_job(v_job,v_emp_refcur);
+loop
+fetch v_emp_refcur into v_empno,v_ename;
+exit when v_emp_refcur%notfound;
+dbms_output.put_line(v_empno||''||v_empno);
+end loop;
+close v_emp_refcur;
+end;
