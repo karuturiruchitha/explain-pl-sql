@@ -1,0 +1,15 @@
+-----Enabling Triggers
+You enable a disabled trigger using the ALTER TRIGGER statement with the ENABLE option. To enable the disabled trigger named reorder on the inventory table, enter the following statement:
+
+ALTER TRIGGER reorder ENABLE;
+To enable all triggers defined for a specific table, use the ALTER TABLE statement with the ENABLE ALL TRIGGERS option. To enable all triggers defined for the INVENTORY table, enter the following statement:
+
+ALTER TABLE inventory
+    ENABLE ALL TRIGGERS;
+    
+-----------example:
+
+
+ALTER TRIGGER orders_before_insert ENABLE;
+
+
