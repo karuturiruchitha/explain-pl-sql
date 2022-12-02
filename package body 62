@@ -1,0 +1,11 @@
+---------The above syntax shows the creation of package body.
+
+
+CREATE [OR REPLACE] PACKAGE BODY <package_name>
+IS
+<global_declaration part>
+<Private element definition>
+<sub_program and public element definition>
+.
+<Package Initialization> 
+END <package_name>
