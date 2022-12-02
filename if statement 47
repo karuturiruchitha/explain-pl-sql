@@ -1,0 +1,6 @@
+IF salary <= 80000
+THEN
+   give_bonus (employee_id, 0);
+ELSE
+   give_bonus (employee_id, 1000);
+END IF;
