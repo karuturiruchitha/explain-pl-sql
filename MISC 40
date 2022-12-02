@@ -1,0 +1,36 @@
+FOR CREATING A VIEW FIRST WE NEED A TABLE
+
+
+CREATE TABLE Employees
+(EmployeeID    INT NOT NULL, 
+ FirstName     NVARCHAR(50) NOT NULL, 
+ MiddleName    NVARCHAR(50) NULL, 
+ LastName      NVARCHAR(75) NOT NULL, 
+ Title         NVARCHAR(100) NULL, 
+ HireDate      DATETIME NOT NULL, 
+ VacationHours SMALLINT NOT NULL, 
+ Salary        DECIMAL(19, 4) NOT NULL
+);
+GO
+CREATE TABLE Products
+(ProductID INT NOT NULL, 
+ Name      NVARCHAR(255) NOT NULL, 
+ Price     DECIMAL(19, 4) NOT NULL
+);
+GO
+CREATE TABLE Sales
+(SalesID    UNIQUEIDENTIFIER NOT NULL, 
+ ProductID  INT NOT NULL, 
+ EmployeeID INT NOT NULL, 
+ Quantity   SMALLINT NOT NULL, 
+ SaleDate   DATETIME NOT NULL
+);
+
+
+
+CREATE VIEW vEmployeesWithSales
+AS
+     SELECT DISTINCT 
+            Employees.*
+     FROM Employees
+          JOIN Sales ON Employees.EmployeeID = Sales.EmployeeID;
