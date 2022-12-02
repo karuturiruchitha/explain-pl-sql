@@ -1,0 +1,17 @@
+SELECT ASCII(studentName) AS NumCodeOfFirstChar
+FROM students;
+
+
+SELECT CHAR(78) AS CodeToCharacter;
+
+
+SELECT DATALENGTH('ruchitha');
+
+
+SELECT DIFFERENCE('cat', 'rat');
+
+
+SELECT LEFT('String ', 3) AS ExtractString;
+
+
+SELECT REPLACE('cat rat', 'a', 'c');
