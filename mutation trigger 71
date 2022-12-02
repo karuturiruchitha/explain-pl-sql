@@ -1,0 +1,29 @@
+A mutating table error (ORA-04091) occurs when a row-level trigger tries to examine or change a table that is already undergoing change 
+(via an INSERT, UPDATE, or DELETE statement). 
+In particular, this error occurs when a row-level trigger attempts to read or write the table from which the trigger was fired.
+
+
+CREATE OR REPLACE TRIGGER customers_credit_policy_trg 
+    AFTER INSERT OR UPDATE 
+    ON customers
+    FOR EACH ROW 
+DECLARE 
+    l_max_credit   customers.credit_limit%TYPE; 
+BEGIN 
+    -- get the lowest non-zero credit 
+    SELECT MIN (credit_limit) * 5 
+        INTO l_max_credit 
+        FROM customers
+        WHERE credit_limit > 0;
+    
+    -- check with the new credit
+    IF l_max_credit < :NEW.credit_limit 
+    THEN 
+        UPDATE customers 
+        SET credit_limit = l_max_credit 
+        WHERE customer_id = :NEW.customer_id; 
+    END IF; 
+END;
+/
+Code language: SQL (Structured Query Language) (sql)
+This statement updates the credit limit of the customer 1 to 19000:
