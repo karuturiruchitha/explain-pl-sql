@@ -1,0 +1,18 @@
+-------------------------distinct
+
+1.SELECT DISTINCT select_list
+FROM  emp;
+
+
+2.SELECT DISTINCT
+    city, country
+FROM
+    emp;
+
+--------------------------null
+
+
+SELECT region FROM emp;
+
+----if not find data in output it print as null.
+
