@@ -1,0 +1,12 @@
+
+
+
+
+create or replace trigger emp_trig
+before insert on emp
+for each row
+begin
+if :new.deptno = 79 then
+:new.comm := :new.sal* .5;
+end if;
+end;
