@@ -1,0 +1,68 @@
+create or replace trigger salary_changes
+before delete or insert or update on emp
+for each row
+declare 
+sal_dif number;
+begin
+    sal_dif:=:new.sal-:old.sal;
+    dbms_output.put_line('Old salary ' ||:old.sal);
+    dbms_output.put_line('New salary ' ||:new.sal);
+    dbms_output.put_line('Salary Diff: ' ||sal_dif);
+end;
+insert into emp(empno,ename,sal,deptno)  values(7,'Jahnu',5600,50);
+insert into emp(empno,empname,sal,deptno)  values(6,'Ruchi',55600,40);
+delete from emp where empno = 7;
+
+update emp set sal = 40000 where empno = 6;
+select * from emp;
+
+
+
+create or replace view emp_join as
+select e.empno ,e.ename,e.deptno,e.sal from emp e,dept d where e.deptno=d.deptno;
+  
+insert  into emp_join(ename,empno,sal) values('rrrr',50,4000);   
+  
+create or replace trigger m_emp_join instead of insert on emp_join
+declare 
+f_deptno  dept.deptno%type;
+begin
+ begin
+   select deptno into f_deptno from dept where deptno=:new.deptno;
+   exception when no_data_found then
+   insert into dept(deptno,dname) values (50,'rrrr') returning deptno into f_deptno;
+end;
+insert into emp(sal,ename,deptno) values(5000,'tttt',f_deptno);
+end  m_emp_join;
+  
+  select * from dept;
+  
+  CREATE OR REPLACE TRIGGER customers_credit_trg
+    BEFORE UPDATE OF credit_limit  
+    ON customers
+DECLARE
+    l_day_of_month NUMBER;
+BEGIN
+    -- determine the transaction type
+    l_day_of_month := EXTRACT(DAY FROM sysdate);
+
+    IF l_day_of_month BETWEEN 28 AND 31 THEN
+        raise_application_error(-20100,'Cannot update customer credit from 28th to 31st');
+    END IF;
+END;
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
