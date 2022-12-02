@@ -1,0 +1,15 @@
+SELECT * FROM Orders WHERE OrderDate='2007-12-12';
+
+
+SELECT DATEDIFF('2018-01-16','2010-01-03') AS DateDiff;
+
+
+------date format
+
+DATE_FORMAT(NOW(),'%d %b %y');
+
+
+SELECT Name, Extract(DAY FROM BirthTime) AS BirthDay FROM Test;
+
+
+SELECT Name, Extract(YEAR FROM BirthTime) AS BirthYear FROM Test;
