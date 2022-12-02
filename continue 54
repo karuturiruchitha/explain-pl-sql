@@ -1,0 +1,12 @@
+--example
+declare
+a number(10);
+begin
+for a in 10 .. 40 loop
+if (a=19) then
+continue;
+else
+dbms_output.put_line('value of a is '||a);
+end if;
+end loop;
+end;
