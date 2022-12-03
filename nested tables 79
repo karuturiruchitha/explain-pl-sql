@@ -1,4 +1,4 @@
-Nested Tables – learn about nested tables.
+-----------------------------------------------------
 
 PL/SQL nested tables are similar to arrays in other programming languages, but they have some important differences. 
 First of all, nested tables can be stored in the database, where as arrays can only be used in memory. 
@@ -6,7 +6,7 @@ This means that you can query and update nested tables using PL/SQL, and you can
 
 PL/SQL nested tables can be stored in the database as columns of a table, or they can be passed as parameters to stored procedures and functions. 
 When working with nested tables, you can use the following keywords:
-
+------------------------------------------------------
 – TYPE: Used to declare a nested table type
 – IS TABLE OF: Used to create a variable or column of a nested table type
 – INDEX BY: Used to specify the index of a nested table
@@ -22,8 +22,7 @@ When working with nested tables, you can use the following keywords:
 – TRIM(): Used to remove elements from a nested table
 – EXISTS(): Used to test for the existence of an element in a nested table
 – COUNT(): Used to return the number of elements in a nested table
-
-EXAMPLE::
+---------------------------------------------------------------------------------------------------------
 ---------
 DECLARE
 	TYPE stu IS TABLE OF VARCHAR2(10);
