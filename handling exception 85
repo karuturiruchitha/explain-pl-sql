@@ -1,0 +1,12 @@
+set serveroutput on
+declare 
+enum num:=&NUMBER;
+en emp.ename%type;
+begin
+select ename into en from emp where eno=enum;
+dbms_output.put_line(en);
+exception 
+when no_data_found then
+dbms_output.put_line('ERROR');
+dbms_output.put_line('There is no such employee number');
+end;
