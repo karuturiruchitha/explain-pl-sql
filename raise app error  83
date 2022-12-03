@@ -1,0 +1,30 @@
+set serveroutput on;
+declare
+r number :=17;
+s number :=9;
+c number;
+exp1 exception ;
+begin
+if s=0 then
+raise exp1;
+elsif s>r then
+raise exp1;
+else
+c :=r/s;
+dbms_output.put_line('The division of r and s is'||c);
+end if;
+exception 
+when exp1 then
+dbms_output.put_line('Illegal division');
+
+end;
+
+set serveroutput on;
+declare
+name emp.ename%type;
+begin
+select ename into name from emp where empno=-1;
+exception
+when no_data_found then
+dbms_output.put_line('No such data');
+end;
